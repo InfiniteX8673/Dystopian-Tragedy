@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Dystopian Tragedy</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="logo 1.png">
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+<!-- Animations -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<!-- Particles -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+
+<script src="main.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Dystopian Tragedy</h1>
+<header>
+    <h1>Dystopian Tragedy</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="features.html">Features</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <button id="themeToggle" class="theme-toggle">🌙</button>
+</header>
+</header>
+
+<div class="hero" style="background:url('background.png') center/cover no-repeat;">
+    <h2 class="scroll-animate">Contact Us</h2>
+</div>
+
+<section class="scroll-animate">
+    <h3 class="scroll-animate">Get in Touch</h3>
+
+    <div class="contact-container">
+        <div class="contact-info scroll-animate">
+            <h4 class="scroll-animate">Contact Information</h4>
+            <div class="contact-item scroll-animate">
+                <h5>?? Email</h5>
+                <p>support@dystopiantragedy.com</p>
+            </div>
+            <div class="contact-item scroll-animate">
+                <h5>?? Discord</h5>
+                <p>Join our community: discord.gg/dystopiantragedy</p>
+            </div>
+            <div class="contact-item scroll-animate">
+                <h5>?? Social Media</h5>
+                <p>Follow us for updates and behind-the-scenes content</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter">??</a>
+                    <a href="#" aria-label="YouTube">??</a>
+                    <a href="#" aria-label="Twitch">??</a>
+                    <a href="#" aria-label="Reddit">??</a>
+                </div>
+            </div>
+            <div class="contact-item scroll-animate">
+                <h5>?? Support Hours</h5>
+                <p>Monday - Friday: 9:00 AM - 6:00 PM EST<br>
+                Weekend: 10:00 AM - 4:00 PM EST</p>
+            </div>
+        </div>
+
+        <div class="contact-form-wrapper scroll-animate">
+            <h4 class="scroll-animate">Send us a Message</h4>
+            <form id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="from_name">Name *</label>
+                    <input type="text" name="from_name" id="from_name" placeholder="Enter your full name" required class="scroll-animate" aria-describedby="name-error">
+                </div>
+                <div class="form-group">
+                    <label for="from_email">Email *</label>
+                    <input type="email" name="from_email" id="from_email" placeholder="your.email@example.com" required class="scroll-animate" aria-describedby="email-error">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select name="subject" id="subject" class="scroll-animate">
+                        <option value="">Select a topic</option>
+                        <option value="bug">Bug Report</option>
+                        <option value="feature">Feature Request</option>
+                        <option value="support">Technical Support</option>
+                        <option value="feedback">General Feedback</option>
+                        <option value="partnership">Partnership Inquiry</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea name="message" id="message" rows="6" placeholder="Tell us what's on your mind..." required class="scroll-animate" maxlength="500" aria-describedby="message-error"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="newsletter" id="newsletter">
+                        <span class="checkmark"></span>
+                        Send me updates about Dystopian Tragedy
+                    </label>
+                </div>
+
+                <button type="submit" class="submit scroll-animate">Send Message</button>
+
+                <div id="formStatus" class="form-status" style="display:none;"></div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="scroll-animate">
+    <h3 class="scroll-animate">Frequently Asked Questions</h3>
+    <div class="faq-section">
+        <div class="faq-item scroll-animate">
+            <h4 class="faq-question">What platforms is Dystopian Tragedy available on?</h4>
+            <div class="faq-answer">
+                <p>Dystopian Tragedy is currently available for Windows and Linux. We're working on Mac and console versions for future releases.</p>
+            </div>
+        </div>
+        <div class="faq-item scroll-animate">
+            <h4 class="faq-question">Is there multiplayer support?</h4>
+            <div class="faq-answer">
+                <p>Yes! vBeta 0.1 includes co-op campaign for up to 4 players and competitive multiplayer modes. More multiplayer features are in development.</p>
+            </div>
+        </div>
+        <div class="faq-item scroll-animate">
+            <h4 class="faq-question">How can I report bugs or issues?</h4>
+            <div class="faq-answer">
+                <p>Use the contact form above or join our Discord server to report bugs. Please include as much detail as possible, including your system specifications.</p>
+            </div>
+        </div>
+        <div class="faq-item scroll-animate">
+            <h4 class="faq-question">Will there be future updates?</h4>
+            <div class="faq-answer">
+                <p>Absolutely! We're actively developing new content, features, and improvements. Follow our social media or join the newsletter for the latest updates.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    &copy; 2026 Dystopian Tragedy. All rights reserved.
+</footer>
+
+<!-- Particles -->
+<div id="particles"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const submitButton = this.querySelector('.submit');
+            const formData = new FormData(this);
+            const name = formData.get('from_name');
+            const email = formData.get('from_email');
+            const message = formData.get('message');
+
+            // Reset status
+            formStatus.style.display = 'none';
+            formStatus.className = 'form-status';
+
+            // Validate form
+            if (!name || !email || !message) {
+                showFormStatus('Please fill in all fields.', 'error');
+                return;
+            }
+
+            if (!isValidEmail(email)) {
+                showFormStatus('Please enter a valid email address.', 'error');
+                return;
+            }
+
+            if (message.length < 10) {
+                showFormStatus('Message must be at least 10 characters long.', 'error');
+                return;
+            }
+
+            // Show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+            showFormStatus('Sending your message...', 'loading');
+
+            // Simulate form submission (replace with actual service)
+            setTimeout(() => {
+                // Success simulation
+                showFormStatus('Message sent successfully! We\'ll get back to you soon.', 'success');
+                contactForm.reset();
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Message';
+
+                // Log form data for demonstration
+                console.log('Form submitted:', { name, email, message, timestamp: new Date() });
+
+                // Hide status after 5 seconds
+                setTimeout(() => {
+                    formStatus.style.display = 'none';
+                }, 5000);
+            }, 1500);
+        });
+    }
+
+    function showFormStatus(message, type) {
+        formStatus.textContent = message;
+        formStatus.className = `form-status ${type}`;
+        formStatus.style.display = 'block';
+
+        // Set color based on type
+        switch(type) {
+            case 'error':
+                formStatus.style.color = '#ff4444';
+                break;
+            case 'success':
+                formStatus.style.color = '#00ff00';
+                break;
+            case 'loading':
+                formStatus.style.color = '#00aaff';
+                break;
+            default:
+                formStatus.style.color = '#00aaff';
+        }
+    }
+
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    // Add character counter for message field
+    const messageField = document.getElementById('message');
+    if (messageField) {
+        const counter = document.createElement('div');
+        counter.className = 'char-counter';
+        counter.style.cssText = 'text-align: right; margin-top: 5px; font-size: 0.9em; color: #666;';
+        messageField.parentNode.appendChild(counter);
+
+        messageField.addEventListener('input', function() {
+            const length = this.value.length;
+            counter.textContent = `${length}/500 characters`;
+
+            if (length > 500) {
+                counter.style.color = '#ff4444';
+                this.value = this.value.substring(0, 500);
+            } else if (length > 400) {
+                counter.style.color = '#ffaa00';
+            } else {
+                counter.style.color = '#666';
+            }
+        });
+    }
+
+    // FAQ Toggle Functionality
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        if (question) {
+            question.addEventListener('click', () => {
+                // Close other FAQ items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>

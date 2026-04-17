@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo 1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="main.js" defer></script>
+    <title>Downloads</title>
+</head>
+<body>
+    <header>
+        <h1>Dystopian Tragedy</h1>
+        <nav>
+           <a href="index.html">Home</a>
+           <a href="about.html">About</a>
+           <a href="features.html">Features</a>
+           <a href="contact.html">Contact</a>
+        </nav>
+        <button id="themeToggle" class="theme-toggle">🌙</button>
+    </header>
+    <div class="hero" style="background:url('background.png') center/cover no-repeat;">
+    <h2 class="scroll-animate">Download Dystopian Tragedy</h2>
+    </div>
+    <section class="scroll-animate">
+        <h3 class="scroll-animate">Select Platform</h3>
+        <div class="platform-selector scroll-animate">
+            <button id="windows-btn" class="platform-btn active" onclick="selectPlatform('windows')">Windows</button>
+            <button id="linux-btn" class="platform-btn" onclick="selectPlatform('linux')">Linux</button>
+        </div>
+
+        <div id="download-content" class="download-content scroll-animate">
+            <div id="windows-download" class="platform-download active">
+                <h4>Windows Version</h4>
+                <p class="version-info">Version: vBeta 0.1</p>
+                <button class="download-btn" onclick="window.location.href='https://www.mediafire.com/file/k9d2wym1n3ft4fa/windows.zip/file'">
+                    Download Windows
+                </button>
+            </div>
+
+            <div id="linux-download" class="platform-download">
+                <h4>Linux Version</h4>
+                <p class="version-info">Version: vBeta 0.1</p>
+                <button class="download-btn" onclick="window.location.href='https://www.mediafire.com/file/940tvfnw1hmarn3/Linux.zip/file'">
+                    Download Linux
+                </button>
+            </div>
+        </div>
+    </section>
+
+<footer>
+    &copy; 2026 Dystopian Tragedy. All rights reserved.
+</footer>
+
+<!-- Particles container -->
+<div id="particles"></div>
+
+<script>
+function selectPlatform(platform) {
+    // Get all platform buttons and download sections
+    const windowsBtn = document.getElementById('windows-btn');
+    const linuxBtn = document.getElementById('linux-btn');
+    const windowsDownload = document.getElementById('windows-download');
+    const linuxDownload = document.getElementById('linux-download');
+
+    // Remove active class from all buttons and sections
+    windowsBtn.classList.remove('active');
+    linuxBtn.classList.remove('active');
+    windowsDownload.classList.remove('active');
+    linuxDownload.classList.remove('active');
+
+    // Add active class to selected platform
+    if (platform === 'windows') {
+        windowsBtn.classList.add('active');
+        windowsDownload.classList.add('active');
+    } else if (platform === 'linux') {
+        linuxBtn.classList.add('active');
+        linuxDownload.classList.add('active');
+    }
+}
+
+// Initialize particles when page loads
+function initParticles() {
+    if (typeof tsParticles !== 'undefined') {
+        tsParticles.load("particles", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#00aaff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.3, random: true },
+                size: { value: 3, random: 2 },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#00aaff",
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 1,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "bounce",
+                    bounce: true
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                },
+                modes: {
+                    repulse: { distance: 200, duration: 0.4 },
+                    push: { particles_nb: 4 }
+                }
+            },
+            retina_detect: true
+        });
+    }
+}
+
+// Initialize particles when page loads
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initParticles);
+} else {
+    initParticles();
+}
+</script>
+
+</body>
+</html>
