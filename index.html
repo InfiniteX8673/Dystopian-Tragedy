@@ -7,57 +7,67 @@
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="logo 1.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
 <script src="main.js" defer></script>
 </head>
 <body>
 
-<header role="banner">
+<header>
     <h1>Dystopian Tragedy</h1>
-    <nav role="navigation" aria-label="Main navigation">
-        <a href="index.html" class="active-nav" aria-current="page">Home</a>
+    <nav>
+        <a href="index.html" class="active-nav">Home</a>
         <a href="about.html">About</a>
         <a href="features.html">Features</a>
         <a href="contact.html">Contact</a>
     </nav>
-    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark/light theme">🌙</button>
+    <button id="themeToggle" class="theme-toggle">🌙</button>
 </header>
 
-<section class="hero" aria-label="Game introduction">
+<div class="hero">
     <div class="hero-panel scroll-animate">
         <h2>Welcome to Dystopian Tragedy</h2>
-        <p> Dive into a neon-soaked world of hacking, combat, and relentless choice-driven action.</p>
-        <a href="features.html" class="hero-button scroll-animate" aria-label="Learn more about game features">Learn More</a>
+        <p>Dive into a neon-soaked world of hacking, combat, and relentless choice-driven action.</p>
+        <a href="features.html" class="hero-button">Learn More</a>
     </div>
-</section>
+</div>
 
 <main>
-<section id="trailer" class="scroll-animate" aria-labelledby="trailer-heading">
-    <h3 id="trailer-heading" class="scroll-animate">Game Trailer</h3>
+
+<section class="scroll-animate">
+    <h3 class="scroll-animate">Game Trailer</h3>
+
     <div class="video-container scroll-animate">
-        <video width="100%" height="450" controls aria-label="Dystopian Tragedy game trailer">
-            <source src="vid-test.mkv" type="video/mp4">
+        <video width="100%" height="450" controls>
+            <source src="vid-test.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
 </section>
 
-<section id="screenshots" class="scroll-animate" aria-labelledby="screenshots-heading">
-    <h3 id="screenshots-heading" class="scroll-animate">Screenshots</h3>
-    <div class="screenshots" role="list" aria-label="Game screenshot gallery">
-        <img src="screenshot1.png" alt="Game screenshot showing cyberpunk city landscape" class="scroll-animate" role="listitem">
-        <img src="screenshot2.png" alt="Game screenshot showing character combat scene" class="scroll-animate" role="listitem">
-        <img src="screenshot3.png" alt="Game screenshot showing neon-lit streets" class="scroll-animate" role="listitem">
-        <img src="screenshot4.png" alt="Game screenshot showing futuristic building interiors" class="scroll-animate" role="listitem">
-        <img src="screenshot5.png" alt="Game screenshot showing action sequence" class="scroll-animate" role="listitem">
+
+<section class="scroll-animate">
+    <h3 class="scroll-animate">Screenshots</h3>
+
+    <div class="screenshots">
+        <img src="screenshot1.png" class="scroll-animate">
+        <img src="screenshot2.png" class="scroll-animate">
+        <img src="screenshot3.png" class="scroll-animate">
+        <img src="screenshot4.png" class="scroll-animate">
+        <img src="screenshot5.png" class="scroll-animate">
     </div>
 </section>
 
-<section id="download" class="cta-section scroll-animate" aria-labelledby="download-heading">
-    <h3 id="download-heading" class="scroll-animate">Play Now</h3>
-    <a href="downloads.html" class="hero-button scroll-animate" aria-label="Download Dystopian Tragedy game">Download / Play</a>
+
+<section class="scroll-animate">
+    <h3 class="scroll-animate">Play Now</h3>
+
+    <div class="cta-section scroll-animate">
+        <a href="downloads.html" class="hero-button">
+            Download / Play
+        </a>
+    </div>
 </section>
+
 </main>
 
 <footer>
@@ -69,148 +79,21 @@
     </div>
 </footer>
 
-<!-- Full-screen modal -->
+
+<!-- Image Modal -->
 <div id="imageModal" class="modal">
     <span class="close">&times;</span>
+
     <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
     <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+
     <img class="modal-content" id="modalImage">
     <div class="image-counter" id="imageCounter"></div>
 </div>
 
+
 <!-- Particles container -->
 <div id="particles"></div>
-
-<script>
-// ===== EmailJS Setup =====
-emailjs.init("service_8d9k8f9"); // Using public EmailJS service
-
-// ===== Image Modal Functionality =====
-document.addEventListener('DOMContentLoaded', function() {
-    var modal = document.getElementById("imageModal");
-    var modalImg = document.getElementById("modalImage");
-    var images = document.querySelectorAll(".screenshots img");
-    var currentImageIndex = 0;
-    var prevBtn = document.getElementById("prevBtn");
-    var nextBtn = document.getElementById("nextBtn");
-    var imageCounter = document.getElementById("imageCounter");
-
-    // Open modal and show selected image
-    images.forEach(function(img, index) {
-        img.onclick = function(){
-            currentImageIndex = index;
-            showImage(currentImageIndex);
-            modal.style.display = "block";
-        }
-    });
-
-    // Show image at specific index
-    function showImage(index) {
-        modalImg.src = images[index].src;
-        imageCounter.textContent = (index + 1) + " / " + images.length;
-
-        // Hide/show navigation buttons based on position
-        prevBtn.style.display = index === 0 ? "none" : "block";
-        nextBtn.style.display = index === images.length - 1 ? "none" : "block";
-    }
-
-    // Navigate to previous image
-    prevBtn.onclick = function() {
-        if (currentImageIndex > 0) {
-            currentImageIndex--;
-            showImage(currentImageIndex);
-        }
-    }
-
-    // Navigate to next image
-    nextBtn.onclick = function() {
-        if (currentImageIndex < images.length - 1) {
-            currentImageIndex++;
-            showImage(currentImageIndex);
-        }
-    }
-
-    // Close modal
-    var span = document.getElementsByClassName("close")[0];
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    modal.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-
-    // Keyboard navigation
-    document.addEventListener('keydown', function(event) {
-        if (modal.style.display === "block") {
-            if (event.key === "ArrowLeft" && currentImageIndex > 0) {
-                currentImageIndex--;
-                showImage(currentImageIndex);
-            } else if (event.key === "ArrowRight" && currentImageIndex < images.length - 1) {
-                currentImageIndex++;
-                showImage(currentImageIndex);
-            } else if (event.key === "Escape") {
-                modal.style.display = "none";
-            }
-        }
-    });
-});
-
-
-
-// ===== Particles Animation =====
-function initParticles() {
-    if (typeof tsParticles !== 'undefined') {
-        tsParticles.load("particles", {
-            particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: "#00aaff" },
-                shape: { type: "circle" },
-                opacity: { value: 0.3, random: true },
-                size: { value: 3, random: 2 },
-                line_linked: {
-                    enable: true,
-                    distance: 150,
-                    color: "#00aaff",
-                    opacity: 0.2,
-                    width: 1
-                },
-                move: {
-                    enable: true,
-                    speed: 1,
-                    direction: "none",
-                    random: true,
-                    straight: false,
-                    out_mode: "bounce",
-                    bounce: true
-                }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: {
-                    onhover: { enable: true, mode: "repulse" },
-                    onclick: { enable: true, mode: "push" },
-                    resize: true
-                },
-                modes: {
-                    repulse: { distance: 200, duration: 0.4 },
-                    push: { particles_nb: 4 }
-                }
-            },
-            retina_detect: true
-        });
-    }
-}
-
-// Initialize particles when page loads
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initParticles);
-} else {
-    initParticles();
-}
-</script>
 
 </body>
 </html>
