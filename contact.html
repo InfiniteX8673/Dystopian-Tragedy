@@ -28,8 +28,6 @@
 
 <header>
     <h1>Dystopian Tragedy</h1>
-<header>
-    <h1>Dystopian Tragedy</h1>
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -37,7 +35,6 @@
         <a href="contact.html">Contact</a>
     </nav>
     <button id="themeToggle" class="theme-toggle">🌙</button>
-</header>
 </header>
 
 <div class="hero" style="background:url('background.png') center/cover no-repeat;">
@@ -51,25 +48,26 @@
         <div class="contact-info scroll-animate">
             <h4 class="scroll-animate">Contact Information</h4>
             <div class="contact-item scroll-animate">
-                <h5>?? Email</h5>
+                <h5>✉️ Email</h5>
                 <p>support@dystopiantragedy.com</p>
             </div>
             <div class="contact-item scroll-animate">
-                <h5>?? Discord</h5>
+                <h5>💬 Discord</h5>
                 <p>Join our community: discord.gg/dystopiantragedy</p>
             </div>
             <div class="contact-item scroll-animate">
-                <h5>?? Social Media</h5>
+                <h5>🌐 Social Media</h5>
                 <p>Follow us for updates and behind-the-scenes content</p>
                 <div class="social-links">
-                    <a href="#" aria-label="Twitter">??</a>
-                    <a href="#" aria-label="YouTube">??</a>
-                    <a href="#" aria-label="Twitch">??</a>
-                    <a href="#" aria-label="Reddit">??</a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                    <a href="#" aria-label="Reddit"><i class="fa-brands fa-reddit-alien"></i></a>
                 </div>
+                
             </div>
             <div class="contact-item scroll-animate">
-                <h5>?? Support Hours</h5>
+                <h5>🕐 Support Hours</h5>
                 <p>Monday - Friday: 9:00 AM - 6:00 PM EST<br>
                 Weekend: 10:00 AM - 4:00 PM EST</p>
             </div>
@@ -79,15 +77,15 @@
             <h4 class="scroll-animate">Send us a Message</h4>
             <form id="contactForm" novalidate>
                 <div class="form-group">
-                    <label for="from_name">Name *</label>
+                    <label for="from_name">👤 Name *</label>
                     <input type="text" name="from_name" id="from_name" placeholder="Enter your full name" required class="scroll-animate" aria-describedby="name-error">
                 </div>
                 <div class="form-group">
-                    <label for="from_email">Email *</label>
+                    <label for="from_email">✉️ Email *</label>
                     <input type="email" name="from_email" id="from_email" placeholder="your.email@example.com" required class="scroll-animate" aria-describedby="email-error">
                 </div>
                 <div class="form-group">
-                    <label for="subject">Subject</label>
+                    <label for="subject">📌 Subject</label>
                     <select name="subject" id="subject" class="scroll-animate">
                         <option value="">Select a topic</option>
                         <option value="bug">Bug Report</option>
@@ -99,18 +97,20 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="message">Message *</label>
+                    <label for="message">💬 Message *</label>
                     <textarea name="message" id="message" rows="6" placeholder="Tell us what's on your mind..." required class="scroll-animate" maxlength="500" aria-describedby="message-error"></textarea>
                 </div>
                 <div class="form-group">
                     <label class="checkbox-label">
                         <input type="checkbox" name="newsletter" id="newsletter">
                         <span class="checkmark"></span>
-                        Send me updates about Dystopian Tragedy
+                        📰 Send me updates about Dystopian Tragedy
                     </label>
                 </div>
+                <!-- Honeypot Field -->
+                <input type="text" name="website" id="website" style="display:none; position:absolute; left:-9999px;" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-                <button type="submit" class="submit scroll-animate">Send Message</button>
+                <button type="submit" class="submit scroll-animate">✉️ Send Message</button>
 
                 <div id="formStatus" class="form-status" style="display:none;"></div>
             </form>
@@ -119,28 +119,28 @@
 </section>
 
 <section class="scroll-animate">
-    <h3 class="scroll-animate">Frequently Asked Questions</h3>
+    <h3 class="scroll-animate">❓ Frequently Asked Questions</h3>
     <div class="faq-section">
         <div class="faq-item scroll-animate">
-            <h4 class="faq-question">What platforms is Dystopian Tragedy available on?</h4>
+            <h4 class="faq-question">🖥️ What platforms is Dystopian Tragedy available on?</h4>
             <div class="faq-answer">
                 <p>Dystopian Tragedy is currently available for Windows and Linux. We're working on Mac and console versions for future releases.</p>
             </div>
         </div>
         <div class="faq-item scroll-animate">
-            <h4 class="faq-question">Is there multiplayer support?</h4>
+            <h4 class="faq-question">👥 Is there multiplayer support?</h4>
             <div class="faq-answer">
                 <p>Yes! vBeta 0.1 includes co-op campaign for up to 4 players and competitive multiplayer modes. More multiplayer features are in development.</p>
             </div>
         </div>
         <div class="faq-item scroll-animate">
-            <h4 class="faq-question">How can I report bugs or issues?</h4>
+            <h4 class="faq-question">🐛 How can I report bugs or issues?</h4>
             <div class="faq-answer">
                 <p>Use the contact form above or join our Discord server to report bugs. Please include as much detail as possible, including your system specifications.</p>
             </div>
         </div>
         <div class="faq-item scroll-animate">
-            <h4 class="faq-question">Will there be future updates?</h4>
+            <h4 class="faq-question">🚀 Will there be future updates?</h4>
             <div class="faq-answer">
                 <p>Absolutely! We're actively developing new content, features, and improvements. Follow our social media or join the newsletter for the latest updates.</p>
             </div>
@@ -156,120 +156,315 @@
 <div id="particles"></div>
 
 <script>
+/**
+ * Contact Form System with Anti-Spam Protection
+ * Production-ready implementation for EmailJS integration
+ */
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize EmailJS
+    emailjs.init({
+        publicKey: 'YOUR_EMAILJS_PUBLIC_KEY' // Replace with your EmailJS public key
+    });
+
+    // Form Configuration
+    const formConfig = {
+        minTimeForSubmission: 2500, // milliseconds - reject if submitted faster
+        rateLimitDelay: 10000, // milliseconds - minimum time between submissions
+        maxLinks: 2,
+        minMessageLength: 10,
+        maxMessageLength: 500,
+        honeypotFieldName: 'website'
+    };
+
+    // State Management
+    const formState = {
+        lastSubmissionTime: 0,
+        formStartTime: null,
+        submissionCount: 0
+    };
+
+    // DOM Elements
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
+    const messageField = document.getElementById('message');
+    const submitButton = contactForm?.querySelector('.submit');
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const submitButton = this.querySelector('.submit');
-            const formData = new FormData(this);
-            const name = formData.get('from_name');
-            const email = formData.get('from_email');
-            const message = formData.get('message');
-
-            // Reset status
-            formStatus.style.display = 'none';
-            formStatus.className = 'form-status';
-
-            // Validate form
-            if (!name || !email || !message) {
-                showFormStatus('Please fill in all fields.', 'error');
-                return;
-            }
-
-            if (!isValidEmail(email)) {
-                showFormStatus('Please enter a valid email address.', 'error');
-                return;
-            }
-
-            if (message.length < 10) {
-                showFormStatus('Message must be at least 10 characters long.', 'error');
-                return;
-            }
-
-            // Show loading state
-            submitButton.disabled = true;
-            submitButton.textContent = 'Sending...';
-            showFormStatus('Sending your message...', 'loading');
-
-            // Simulate form submission (replace with actual service)
-            setTimeout(() => {
-                // Success simulation
-                showFormStatus('Message sent successfully! We\'ll get back to you soon.', 'success');
-                contactForm.reset();
-                submitButton.disabled = false;
-                submitButton.textContent = 'Send Message';
-
-                // Log form data for demonstration
-                console.log('Form submitted:', { name, email, message, timestamp: new Date() });
-
-                // Hide status after 5 seconds
-                setTimeout(() => {
-                    formStatus.style.display = 'none';
-                }, 5000);
-            }, 1500);
-        });
+    // ============================================================================
+    // EMAIL VALIDATION
+    // ============================================================================
+    function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+        return emailRegex.test(email);
     }
 
-    function showFormStatus(message, type) {
+    // ============================================================================
+    // MESSAGE VALIDATION & SPAM DETECTION
+    // ============================================================================
+    function validateMessage(message) {
+        const issues = [];
+
+        // Check minimum length
+        if (message.length < formConfig.minMessageLength) {
+            issues.push(`Message must be at least ${formConfig.minMessageLength} characters`);
+        }
+
+        // Check for repeated characters (spam pattern: "aaaaaaa" or "111111")
+        const repeatedCharPattern = /(.)\1{4,}/g;
+        if (repeatedCharPattern.test(message)) {
+            issues.push('Message contains excessive repeated characters');
+        }
+
+        // Check for too many links
+        const urlPattern = /(https?:\/\/[^\s]+|www\.[^\s]+)/gi;
+        const links = message.match(urlPattern) || [];
+        if (links.length > formConfig.maxLinks) {
+            issues.push(`Message contains too many links (max: ${formConfig.maxLinks})`);
+        }
+
+        return {
+            valid: issues.length === 0,
+            errors: issues
+        };
+    }
+
+    // ============================================================================
+    // ANTI-SPAM CHECKS
+    // ============================================================================
+    function checkHoneypot(formData) {
+        const honeypotValue = formData.get(formConfig.honeypotFieldName);
+        if (honeypotValue && honeypotValue.trim() !== '') {
+            console.warn('[BOT DETECTED] Honeypot field filled');
+            return false; // Bot detected - fail silently
+        }
+        return true;
+    }
+
+    function checkBotSpeed(submissionTime) {
+        // Reject submissions that are too fast (likely bot)
+        if (submissionTime < formConfig.minTimeForSubmission) {
+            console.warn(`[BOT DETECTED] Form submitted in ${submissionTime}ms (threshold: ${formConfig.minTimeForSubmission}ms)`);
+            return false;
+        }
+        return true;
+    }
+
+    function checkRateLimit() {
+        const now = Date.now();
+        const timeSinceLastSubmission = now - formState.lastSubmissionTime;
+
+        if (formState.lastSubmissionTime !== 0 && timeSinceLastSubmission < formConfig.rateLimitDelay) {
+            const remainingSeconds = Math.ceil((formConfig.rateLimitDelay - timeSinceLastSubmission) / 1000);
+            showStatus(`Please wait ${remainingSeconds}s before sending another message.`, 'error');
+            return false;
+        }
+
+        return true;
+    }
+
+    // ============================================================================
+    // UI FEEDBACK
+    // ============================================================================
+    function showStatus(message, type) {
         formStatus.textContent = message;
         formStatus.className = `form-status ${type}`;
         formStatus.style.display = 'block';
 
-        // Set color based on type
-        switch(type) {
-            case 'error':
-                formStatus.style.color = '#ff4444';
-                break;
-            case 'success':
-                formStatus.style.color = '#00ff00';
-                break;
-            case 'loading':
-                formStatus.style.color = '#00aaff';
-                break;
-            default:
-                formStatus.style.color = '#00aaff';
+        // Apply color styling
+        const colorMap = {
+            error: '#ff4444',
+            success: '#00ff00',
+            loading: '#00aaff'
+        };
+
+        formStatus.style.color = colorMap[type] || '#00aaff';
+    }
+
+    function setSubmitButtonState(disabled, text) {
+        if (submitButton) {
+            submitButton.disabled = disabled;
+            submitButton.textContent = text;
         }
     }
 
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
+    function resetForm() {
+        contactForm.reset();
+        charCounter?.updateCounter(0);
+        formStatus.style.display = 'none';
     }
 
-    // Add character counter for message field
-    const messageField = document.getElementById('message');
-    if (messageField) {
-        const counter = document.createElement('div');
-        counter.className = 'char-counter';
-        counter.style.cssText = 'text-align: right; margin-top: 5px; font-size: 0.9em; color: #666;';
-        messageField.parentNode.appendChild(counter);
+    // ============================================================================
+    // FORM SUBMISSION HANDLER
+    // ============================================================================
+    if (contactForm) {
+        // Set form start time for bot detection
+        contactForm.addEventListener('focus', function() {
+            if (!formState.formStartTime) {
+                formState.formStartTime = Date.now();
+            }
+        }, { capture: true });
 
-        messageField.addEventListener('input', function() {
-            const length = this.value.length;
-            counter.textContent = `${length}/500 characters`;
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
 
-            if (length > 500) {
-                counter.style.color = '#ff4444';
-                this.value = this.value.substring(0, 500);
-            } else if (length > 400) {
-                counter.style.color = '#ffaa00';
-            } else {
-                counter.style.color = '#666';
+            // Reset status
+            formStatus.style.display = 'none';
+
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('from_name')?.trim();
+            const email = formData.get('from_email')?.trim();
+            const subject = formData.get('subject')?.trim() || 'General Inquiry';
+            const message = formData.get('message')?.trim();
+
+            // ====================================================================
+            // VALIDATION CHAIN
+            // ====================================================================
+
+            // 1. Check honeypot (silent block)
+            if (!checkHoneypot(formData)) {
+                console.debug('[BLOCKED] Honeypot triggered - no user feedback shown');
+                return;
+            }
+
+            // 2. Check required fields
+            if (!name || !email || !message) {
+                showStatus('Please fill in all required fields.', 'error');
+                return;
+            }
+
+            // 3. Validate email format
+            if (!validateEmail(email)) {
+                showStatus('Please enter a valid email address.', 'error');
+                return;
+            }
+
+            // 4. Bot speed detection
+            const submissionTime = Date.now() - (formState.formStartTime || Date.now());
+            if (!checkBotSpeed(submissionTime)) {
+                console.debug('[BLOCKED] Bot speed detection triggered');
+                return; // Silent block
+            }
+
+            // 5. Rate limiting
+            if (!checkRateLimit()) {
+                return;
+            }
+
+            // 6. Message content validation
+            const messageValidation = validateMessage(message);
+            if (!messageValidation.valid) {
+                messageValidation.errors.forEach(error => {
+                    console.warn(`[MESSAGE VALIDATION] ${error}`);
+                });
+                showStatus('Your message failed validation. Please review and try again.', 'error');
+                return;
+            }
+
+            // ====================================================================
+            // SUBMISSION
+            // ====================================================================
+
+            // Update button state
+            setSubmitButtonState(true, 'Sending...');
+            showStatus('Sending your message...', 'loading');
+
+            try {
+                // Send email via EmailJS
+                const emailResult = await emailjs.send(
+                    'YOUR_EMAILJS_SERVICE_ID', // Replace with your service ID
+                    'YOUR_EMAILJS_TEMPLATE_ID', // Replace with your template ID
+                    {
+                        from_name: name,
+                        from_email: email,
+                        subject: subject,
+                        message: message,
+                        to_email: 'support@dystopiantragedy.com' // Your contact email
+                    }
+                );
+
+                if (emailResult.status === 200) {
+                    showStatus('✓ Message sent successfully! We\'ll get back to you soon.', 'success');
+                    resetForm();
+                    formState.lastSubmissionTime = Date.now();
+                    formState.submissionCount++;
+
+                    // Auto-hide success message
+                    setTimeout(() => {
+                        formStatus.style.display = 'none';
+                    }, 5000);
+
+                } else {
+                    showStatus('Error sending message. Please try again.', 'error');
+                    setSubmitButtonState(false, 'Send Message');
+                }
+
+            } catch (error) {
+                console.error('[EMAIL ERROR]', error);
+                showStatus('Failed to send message. Please try again later.', 'error');
+                setSubmitButtonState(false, 'Send Message');
             }
         });
     }
 
-    // FAQ Toggle Functionality
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        if (question) {
+    // ============================================================================
+    // CHARACTER COUNTER FOR MESSAGE FIELD
+    // ============================================================================
+    const charCounter = {
+        element: null,
+        maxLength: formConfig.maxMessageLength,
+
+        init: function() {
+            if (!messageField) return;
+
+            // Create counter element
+            this.element = document.createElement('div');
+            this.element.className = 'char-counter';
+            this.element.style.cssText = 'text-align: right; margin-top: 5px; font-size: 0.9em; color: #666;';
+            messageField.parentNode.appendChild(this.element);
+
+            // Initialize counter display
+            this.updateCounter(0);
+
+            // Update on input
+            messageField.addEventListener('input', (e) => {
+                this.updateCounter(e.target.value.length);
+            });
+        },
+
+        updateCounter: function(length) {
+            if (!this.element) return;
+
+            this.element.textContent = `${length}/${this.maxLength} characters`;
+
+            // Color coding
+            if (length > this.maxLength) {
+                this.element.style.color = '#ff4444'; // Red - over limit
+            } else if (length > this.maxLength * 0.8) {
+                this.element.style.color = '#ffaa00'; // Orange - near limit
+            } else if (length < 10) {
+                this.element.style.color = '#ff6666'; // Light red - too short
+            } else {
+                this.element.style.color = '#666'; // Gray - normal
+            }
+        }
+    };
+
+    charCounter.init();
+
+    // ============================================================================
+    // FAQ TOGGLE FUNCTIONALITY
+    // ============================================================================
+    function initializeFAQ() {
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            if (!question) return;
+
+            question.style.cursor = 'pointer';
             question.addEventListener('click', () => {
-                // Close other FAQ items
+                // Close other open items
                 faqItems.forEach(otherItem => {
                     if (otherItem !== item && otherItem.classList.contains('active')) {
                         otherItem.classList.remove('active');
@@ -279,7 +474,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Toggle current item
                 item.classList.toggle('active');
             });
-        }
+        });
+    }
+
+    initializeFAQ();
+
+    // ============================================================================
+    // DEBUG INFO (Console logging for transparent bot blocking)
+    // ============================================================================
+    console.log('[CONTACT FORM INITIALIZED]', {
+        minSubmissionTime: formConfig.minTimeForSubmission,
+        rateLimitDelay: formConfig.rateLimitDelay,
+        maxLinks: formConfig.maxLinks,
+        honeypotField: formConfig.honeypotFieldName
     });
 });
 </script>
