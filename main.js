@@ -148,7 +148,89 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.classList.add('loaded');
     });
 
-    // Keyboard Navigation Support
+    // Image Modal Functionality
+    const images = document.querySelectorAll('.screenshots img');
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const closeBtn = document.querySelector('.close');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const imageCounter = document.getElementById('imageCounter');
+    
+    let currentImageIndex = 0;
+    const imageArray = Array.from(images);
+
+    // Open modal on image click
+    images.forEach((img, index) => {
+        img.addEventListener('click', function() {
+            modal.style.display = 'block';
+            modalImg.src = this.src;
+            currentImageIndex = index;
+            updateImageCounter();
+            document.body.style.overflow = 'hidden';
+        });
+        
+        img.style.cursor = 'pointer';
+    });
+
+    // Close modal
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
+
+    function closeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // Navigate to next image
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex + 1) % imageArray.length;
+            modalImg.src = imageArray[currentImageIndex].src;
+            updateImageCounter();
+        });
+    }
+
+    // Navigate to previous image
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex - 1 + imageArray.length) % imageArray.length;
+            modalImg.src = imageArray[currentImageIndex].src;
+            updateImageCounter();
+        });
+    }
+
+    // Update image counter display
+    function updateImageCounter() {
+        if (imageCounter) {
+            imageCounter.textContent = `${currentImageIndex + 1} / ${imageArray.length}`;
+        }
+    }
+
+    // Close modal when clicking outside the image
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    }
+
+    // Keyboard Navigation for Modal
+    document.addEventListener('keydown', (e) => {
+        if (modal && modal.style.display === 'block') {
+            if (e.key === 'ArrowRight') {
+                if (nextBtn) nextBtn.click();
+            } else if (e.key === 'ArrowLeft') {
+                if (prevBtn) prevBtn.click();
+            } else if (e.key === 'Escape') {
+                closeModal();
+            }
+        }
+    });
+
+    // Keyboard Navigation Support (for other modals)
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             // Close any open modals
