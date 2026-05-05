@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
 <script src="main.js" defer></script>
-<script src="video-player.js" defer></script>
 </head>
 <body>
 
@@ -38,10 +37,17 @@
     <h3 class="scroll-animate">Game Trailer</h3>
 
     <div class="video-container scroll-animate" id="videoContainer">
-        <div class="video-glow"></div>
-        <video width="100%" height="450" controls id="gameVideo" preload="metadata">
-            <source src="https://youtu.be/spfj9stziMY?si=xQ7ZAgM3DJDGgRN4">
-            Your browser does not support the video tag.
+        <video
+            id="gameVideo"
+            controls
+            preload="metadata"
+            width="100%"
+            height="450"
+            style="max-width: 100%; height: auto;"
+        >
+            <source src="https://rr2---sn-ap90pquxaxjvh-3bae.googlevideo.com/videoplayback?expire=1778017994&ei=ahL6ab3SIOat8uMPpcX24Qs&ip=2c0f%3Af8f0%3Af310%3A0%3A6e9f%3Acc70%3Af35%3A8414&id=o-AIiHHmBbo2ffI0Akys3xkp3e1IV15_jcd2bpB8ZWZvG1&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=273&met=1777996394%2C&mh=gD&mm=31%2C29&mn=sn-ap90pquxaxjvh-3bae%2Csn-woc7kn7y&ms=au%2Crdu&mv=m&mvi=2&pl=37&rms=au%2Cau&initcwndbps=688750&bui=AbKmrwqYF1aM71Nx-0uIEHrcthhNBXsu3hwqyJg-Y5RnF_lx8jmR6yJAW9L3sdlszo_fOt1z_J3N&spc=96Xrv4dPJh0mmuFzAqjApSA4pN98EOxrZPXRrSNqemI2_Mm7f0Gi-fOom3PGD05GEAph-3M-&vprv=1&svpuc=1&mime=video%2Fmp4&ns=TJYgPognJyboO_c8nyL-cXsU&rqh=1&gir=yes&clen=5265150&ratebypass=yes&dur=140.248&lmt=1777109013192413&mt=1777995938&fvip=5&fexp=51565115%2C51565682%2C51887892&c=WEB&sefc=1&txp=6209224&n=a8Tf0ODxILZpjw_O1b&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AHEqNM4wRgIhAILlofR4ZH02TBJshLU9kLGvie-96JfFNq787tzkFsobAiEAnJvl4_WzHTeZJ9Qnvd4cHu-kwwgcSKXkI4-RGLTsNU4%3D&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRQIhAKLq5QyHxNFa6nAkj7CnEUExg-YdellkbZ3x3mV3TAuOAiBUQbqVAsWXK6hn6s0GClePI93nkh32DZ0rfhgqGD_7Fg%3D%3D" type="video/mp4">
+            Your browser does not support the HTML5 video tag. 
+            <a href="https://youtu.be/spfj9stziMY?si=oJVv-9uNhzhtz9dS" target="_blank" rel="noreferrer noopener">Watch the trailer on YouTube</a>.
         </video>
     </div>
 </section>
