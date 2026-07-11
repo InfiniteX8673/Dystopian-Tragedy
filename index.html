@@ -6,104 +6,76 @@
 <title>Dystopian Tragedy - Home</title>
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="logo 1.png">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <script src="main.js" defer></script>
 </head>
 <body>
 
 <header>
-    <h1>Dystopian Tragedy</h1>
+    <a href="index.html" class="logo">Dystopian Tragedy</a>
     <nav>
         <a href="index.html" class="active-nav">Home</a>
         <a href="about.html">About</a>
         <a href="features.html">Features</a>
         <a href="contact.html">Contact</a>
     </nav>
-    <button id="themeToggle" class="theme-toggle">🌙</button>
+    <div class="header-actions">
+        <a href="downloads.html" class="nav-cta">Download</a>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+    </div>
 </header>
 
 <div class="hero">
-    <div class="hero-panel scroll-animate">
-        <h2>Welcome to Dystopian Tragedy</h2>
-        <p>Dive into a neon-soaked world of hacking, combat, and relentless choice-driven action.</p>
-        <a href="features.html" class="hero-button">Learn More</a>
+    <div class="hero-content">
+        <h1>Dystopian Tragedy</h1>
+        <p>A choice-driven action game set in a dark cyberpunk world. Hack, fight, and navigate a city on the brink.</p>
+        <div class="hero-actions">
+            <a href="downloads.html" class="btn btn-primary">Download</a>
+            <a href="features.html" class="btn btn-outline">Learn More</a>
+        </div>
     </div>
 </div>
 
 <main>
-
-<section class="scroll-animate">
-    <h3 class="scroll-animate">Game Trailer</h3>
-
-    <div class="video-container scroll-animate" id="videoContainer">
-        <video
-            id="gameVideo"
-            controls
-            preload="metadata"
-            width="100%"
-            height="450"
-            poster="https://img.youtube.com/vi/spfj9stziMY/maxresdefault.jpg"
-            style="max-width: 100%; height: auto;"
-        >
+<section>
+    <h2>Trailer</h2>
+    <div class="video-container">
+        <video controls preload="metadata" poster="Gallery/screenshot1.png">
             <source src="trailer.mp4" type="video/mp4">
             Your browser does not support the HTML5 video tag.
-            <a href="https://youtu.be/spfj9stziMY" target="_blank" rel="noreferrer noopener">Watch the trailer on YouTube</a>.
         </video>
-        <p class="video-fallback">If the video does not play, view the trailer on <a href="https://youtu.be/spfj9stziMY" target="_blank" rel="noreferrer noopener">YouTube</a>.</p>
     </div>
 </section>
 
-
-<section class="scroll-animate">
-    <h3 class="scroll-animate">Screenshots</h3>
-
+<section>
+    <h2>Screenshots</h2>
     <div class="screenshots">
-        <img src="screenshot1.png" class="scroll-animate">
-        <img src="screenshot2.png" class="scroll-animate">
-        <img src="screenshot3.png" class="scroll-animate">
-        <img src="screenshot4.png" class="scroll-animate">
-        <img src="screenshot5.png" class="scroll-animate">
+        <img src="Gallery/screenshot1.png" alt="Screenshot 1">
+        <img src="Gallery/screenshot2.png" alt="Screenshot 2">
+        <img src="Gallery/screenshot3.png" alt="Screenshot 3">
+        <img src="Gallery/screenshot4.png" alt="Screenshot 4">
+        <img src="Gallery/screenshot5.png" alt="Screenshot 5">
     </div>
 </section>
-
-
-<section class="scroll-animate">
-    <h3 class="scroll-animate">Play Now</h3>
-
-    <div class="cta-section scroll-animate">
-        <a href="downloads.html" class="hero-button">
-            Download / Play
-        </a>
-    </div>
-</section>
-
 </main>
 
 <footer>
-    <p>&copy; 2026 Dystopian Tragedy. All rights reserved.</p>
-    <div class="socials">
-        <a href="#">&#x1F426;</a>
-        <a href="#">&#x1F4F1;</a>
-        <a href="#">&#x1F3AE;</a>
+    <div class="footer-inner">
+        <p>&copy; 2026 Dystopian Tragedy</p>
+        <div class="socials">
+            <a href="https://www.youtube.com/@DystopianTragedy" target="_blank" rel="noreferrer noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://discord.gg/QwyYQe82" target="_blank" rel="noreferrer noopener" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+        </div>
     </div>
 </footer>
 
-
-<!-- Image Modal -->
 <div id="imageModal" class="modal">
     <span class="close">&times;</span>
-
-    <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
-    <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
-
-    <img class="modal-content" id="modalImage">
+    <button class="nav-btn prev-btn" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="nav-btn next-btn" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+    <img class="modal-content" id="modalImage" alt="Screenshot preview">
     <div class="image-counter" id="imageCounter"></div>
 </div>
-
-
-<!-- Particles container -->
-<div id="particles"></div>
 
 </body>
 </html>
